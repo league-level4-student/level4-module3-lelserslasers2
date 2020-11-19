@@ -32,7 +32,12 @@ class ExceptionsTest {
 	//3. Complete the JUnit test method to test the divide method.
 	@Test
 	public void testDivideByZeroException() {
-		int quo = 10.0 / 0.0
+		double num = 2.0;
+		double num2 = 0.0;
+		
+		fail(em.testDivideByZeroException(num, num2))
+		
+	
 	}
 	
 	//4. In the ExceptionMethods class, write a method called reverseString that takes a

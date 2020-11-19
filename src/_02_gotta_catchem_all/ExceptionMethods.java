@@ -5,7 +5,10 @@ public class ExceptionMethods {
 	double testDivideByZeroException(double num, double num2) {
 		
 		try {
-			quo = num / num2
+			double quo = num / num2;
+		}
+		catch (IllegalArgumentException e){
+			System.out.println("THATS BAD");
 		}
 		
 		return 0.0;
