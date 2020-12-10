@@ -20,7 +20,7 @@ class ExceptionsTest {
 			vars[4] = 5;
 			fail("IndexOutOfBoundsException not thrown");
 		}catch(IndexOutOfBoundsException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			assertArrayEquals(vars, new int[] {4, 1, 2, 3});
 		}
 	}
@@ -32,10 +32,21 @@ class ExceptionsTest {
 	//3. Complete the JUnit test method to test the divide method.
 	@Test
 	public void testDivideByZeroException() {
+		
 		double num = 2.0;
 		double num2 = 0.0;
+		try {
+			double num3 = 40;
+			double num4 = 20;
+			assertEquals(2, em.divide(num3, num4));
+			assertEquals(99, em.divide(num, num2));
+		}
+		catch (IllegalArgumentException e) {
+			assertTrue(true);
+		}
 		
-		fail(em.testDivideByZeroException(num, num2))
+		
+		
 		
 	
 	}
@@ -48,6 +59,13 @@ class ExceptionsTest {
 	@Test
 	public void testReverseString() {
 		
+		try {
+			assertEquals("aaxa", em.reverseString("axaa"));
+			assertEquals("jjjjj", em.reverseString(""));
+		}
+		catch (IllegalStateException e) {
+			assertTrue(true);
+		}
 	}
 	
 	

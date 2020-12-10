@@ -2,15 +2,32 @@ package _02_gotta_catchem_all;
 
 public class ExceptionMethods {
 	
-	double testDivideByZeroException(double num, double num2) {
+	double divide(double num, double num2) throws IllegalArgumentException{
 		
-		try {
-			double quo = num / num2;
+		if (num2 == 0) {
+			throw new IllegalArgumentException();
 		}
-		catch (IllegalArgumentException e){
-			System.out.println("THATS BAD");
-		}
+		double quo = num / num2;
+		return quo;
 		
-		return 0.0;
+		
 	}
+	
+	String reverseString(String str) throws IllegalStateException {
+		
+		if (str.equals("")) {
+			throw new IllegalStateException();
+		}
+		String fred = "";
+		
+		
+		for (int i = str.length() - 1; i >= 0; i--) {
+			fred = fred + str.toCharArray()[i];
+		}
+		
+		return fred;
+		
+	}
+	
+	
 }
